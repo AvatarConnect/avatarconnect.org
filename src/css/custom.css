@@ -1,0 +1,51 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+[data-theme='dark'] {
+  --ifm-color-primary: #5200ff;
+  --ifm-color-primary-dark: #4a00e6;
+  --ifm-color-primary-darker: #4600d9;
+  --ifm-color-primary-darkest: #3900b3;
+  --ifm-color-primary-light: #631aff;
+  --ifm-color-primary-lighter: #6c26ff;
+  --ifm-color-primary-lightest: #864dff;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #ff7ecc;
+  --ifm-color-primary-dark: #ff58bd;
+  --ifm-color-primary-darker: #ff45b5;
+  --ifm-color-primary-darkest: #ff0c9f;
+  --ifm-color-primary-light: #ffa4db;
+  --ifm-color-primary-lighter: #ffb7e3;
+  --ifm-color-primary-lightest: #fff0f9;
+  --ifm-background-color: #181818;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap');
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}

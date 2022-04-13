@@ -1,0 +1,42 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  flex: 1 1 auto;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.heading {
+  font-family: 'IBM Plex Sans Condensed';
+  font-size: 3rem;
+  margin: 0;
+  line-height: 3.5rem;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-width: 500px;
+  color: var(--ifm-font-color-secondary);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners {
+  padding: 20px 0;
+}
