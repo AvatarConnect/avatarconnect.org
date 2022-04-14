@@ -48,11 +48,14 @@ const config = {
       },
       announcementBar: {
         content:
-        'AvatarConnect is now in Beta. Check our the <a target="_blank" rel="noopener noreferrer" href="https://github.com/AvatarConnect">source code</a>.',
+        'AvatarConnect is free and open source. Give us a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/AvatarConnect">Github</a>.',
         backgroundColor: 'var(--ifm-color-primary)',
         textColor: '#ffffff',
         isCloseable: false,
         id: "github-star",
+      },
+      colorMode: {
+        defaultMode: 'dark'
       },
       image: '/branding/logo-dark.svg',
       navbar: {
@@ -100,7 +103,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Get Started',
                 to: '/docs/intro',
               },
             ],
@@ -109,29 +112,25 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/xxqGHcaJnU',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/avatar_connect',
+              },
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/avatarconnect',
               },
             ],
           },
           {
             title: 'More',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/AvatarConnect',
               },
             ],
           },

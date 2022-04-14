@@ -20,7 +20,7 @@ const Slideshow = ({ nbElements }) => {
     <section className={clsx(seCss["section--slim"])}>
       <div className={paCss.logo__desktop}>
         {logos.map((logo) => (
-          <div key={logo.alt} className={paCss.logo__item}>
+          <a href={logo.href} target="_blank" key={logo.alt} className={paCss.logo__item}>
             <img
               alt={logo.alt}
               height={logo.height || 56}
@@ -28,7 +28,7 @@ const Slideshow = ({ nbElements }) => {
               width={logo.width || 140}
               style={{ top: logo.offset ?? 0 }}
             />
-          </div>
+          </a>
         ))}
       </div>
       <div className={paCss.logo__mobile}>
@@ -41,9 +41,9 @@ const Slideshow = ({ nbElements }) => {
                 <div key={panelLogo.alt} className={paCss.logo__item}>
                   <img
                     alt={panelLogo.alt}
-                    height={panelLogo.height}
+                    height={panelLogo.height || 56}
                     src={panelLogo.src}
-                    width={panelLogo.width}
+                    width={panelLogo.width || 140}
                     style={{ top: panelLogo.offset ?? 0 }}
                   />
                 </div>
