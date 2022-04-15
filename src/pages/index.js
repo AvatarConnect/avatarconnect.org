@@ -29,9 +29,9 @@ function HomepageHeader() {
       <directives className="container">
         <div className={styles.content}>
           <div className={styles.textContent}>
-            <h1 className={styles.heading}>Every Avatar Project</h1>
+            <h1 className={styles.heading}>Every <span className="text--gradient">Avatar Project</span></h1>
             <h1 className={styles.heading}>Any Game Engine</h1>
-            <h1 className={styles.heading}>One SDK</h1>
+            <h1 className={styles.heading}>One <span className="text--gradient">SDK</span></h1>
             <p className={styles.tagline}>AvatarConnect is the bridge between avatar projects and metaverse games</p>
             <div className={styles.button}>
               <Link
