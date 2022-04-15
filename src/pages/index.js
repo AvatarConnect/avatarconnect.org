@@ -15,10 +15,10 @@ const IMAGES = [ // WE need 5 here for the keyframes
 
 function HomepageHeader() {
   const exampleImages = IMAGES.reduce((acc, image, index) => {
-    const duration = 6
+    const duration = 4
     const style = {
       '--animation-duration': `${duration * IMAGES.length}s`,
-      '-webkit-animation-delay': index ? `-${(index + 1) * duration}s` : undefined
+      '-webkit-animation-delay': `-${(index + 1) * duration}s`
     }
     acc.push(<img src={`/examples/${image}`} className={styles.exampleImage} style={style} />)
     return acc

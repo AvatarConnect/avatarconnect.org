@@ -50,7 +50,7 @@ const config = {
         content:
         'AvatarConnect is free and open source. Give us a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/AvatarConnect">Github</a>.',
         backgroundColor: 'var(--ifm-color-primary)',
-        textColor: '#ffffff',
+        textColor: 'var(--ifm-font-color-base-inverse)',
         isCloseable: false,
         id: "github-star",
       },
