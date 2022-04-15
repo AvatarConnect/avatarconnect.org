@@ -1,7 +1,6 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+:root {
+  --carousel-padding: 5rem;
+}
 
 .heroBanner {
   flex: 1 1 auto;
@@ -11,8 +10,26 @@
 }
 
 @media screen and (max-width: 996px) {
+  :root {
+    --carousel-padding: -2rem;
+  }
+
   .heroBanner {
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem !important;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .illustrations {
+    height: 100vw;
+    max-height: 350px;
+    position: relative;
+  }
+
+  .heroImage {
+    right: 0;
   }
 }
 
@@ -24,6 +41,10 @@
 
   .tagline {
     font-size: 1.2rem !important;
+  }
+
+  .illustrations {
+    max-height: 280px;
   }
 
   .heroBanner {
@@ -53,4 +74,58 @@
 
 .partners {
   padding: 20px 0;
+}
+
+.content {
+  display: flex;
+  justify: space-between;
+}
+
+.textContent {
+  z-index: 3;
+}
+
+.illustrations {
+  flex: 1 1 auto;
+  z-index: 0;
+}
+
+.heroImage {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  height: 90%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.exampleImage {
+  z-index: 2;
+  height: 100%;
+  bottom: -25%;
+  position: absolute;
+  right: 5rem;
+
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: var(--animation-duration);
+  -webkit-animation-duration: var(--animation-duration);
+}
+
+@-webkit-keyframes fade  {
+  0% {opacity: 0; right: -3rem; }
+  7% {opacity: 1; right: 5rem; }
+  20% {opacity: 1; right: 5rem; }
+  22% {opacity: 0; right: 8rem; }
+  100% {opacity: 0; right: 0; }
+}
+
+@keyframes fade {
+  0% {opacity: 0; right: calc(var(--carousel-padding) - 1rem); }
+  7% {opacity: 1; right: var(--carousel-padding); }
+  20% {opacity: 1; right: var(--carousel-padding); }
+  22% {opacity: 0; right: calc(1rem + var(--carousel-padding)); }
+  100% {opacity: 0; right: 0; }
 }
