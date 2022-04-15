@@ -8,9 +8,9 @@ import Partners from '@site/src/components/Partners';
 const IMAGES = [ // WE need 5 here for the keyframes
   'readyplayerme.png',
   'meebits.png',
+  'crypto-avatars.png',
   'readyplayerme.png',
   'meebits.png',
-  'readyplayerme.png',
 ]
 
 function HomepageHeader() {

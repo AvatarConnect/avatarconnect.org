@@ -74,6 +74,7 @@ const config = {
           {
             label: 'Integrations',
             type: 'dropdown',
+            position: 'left',
             items: [
               {
                 label: 'Unity SDK',
@@ -84,6 +85,12 @@ const config = {
                 href: 'https://www.facebook.com',
               },
             ],
+          },
+          {
+            label: 'Add Your Project',
+            type: 'doc',
+            position: 'left',
+            docId: 'providers'
           },
           {
             type: 'search',
