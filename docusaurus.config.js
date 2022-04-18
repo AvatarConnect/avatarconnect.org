@@ -9,12 +9,11 @@ const config = {
   title: 'AvatarConnect',
   url: 'https://avatarconnect.org',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'favicon/favicon.ico',
   organizationName: 'AvatarConnect', // Usually your GitHub org/user name.
   projectName: 'avatarconnect.org', // Usually your repo name.
-
   presets: [
     [
       'classic',
