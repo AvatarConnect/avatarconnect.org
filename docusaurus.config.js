@@ -55,7 +55,8 @@ const config = {
         id: "github-star",
       },
       colorMode: {
-        defaultMode: 'dark'
+        defaultMode: 'dark',
+        disableSwitch: true,
       },
       image: '/branding/logo-dark.svg',
       navbar: {
@@ -72,6 +73,10 @@ const config = {
             label: 'Documentation',
           },
           {
+            label: 'Add Your Project',
+            href: '/docs/providers',
+          },
+          {
             label: 'Integrations',
             type: 'dropdown',
             position: 'left',
@@ -85,12 +90,6 @@ const config = {
                 href: 'https://www.facebook.com',
               },
             ],
-          },
-          {
-            label: 'Add Your Project',
-            type: 'doc',
-            position: 'left',
-            docId: 'providers'
           },
           {
             type: 'search',
