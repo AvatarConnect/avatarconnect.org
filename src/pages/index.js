@@ -32,7 +32,7 @@ function HomepageHeader() {
             <h1 className={styles.heading}>Every <span className="text--gradient">Avatar Project</span></h1>
             <h1 className={styles.heading}>Any Game Engine</h1>
             <h1 className={styles.heading}>One <span className="text--gradient">SDK</span></h1>
-            <p className={styles.tagline}>AvatarConnect is the bridge between avatar projects and metaverse games</p>
+            <p className={styles.tagline}>AvatarConnect is the bridge between avatar projects and metaverse experiences</p>
             <div className={styles.button}>
               <Link
                 className="button button--primary button--lg"
@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <Layout
       title="AvatarConnect"
-      description="The bridge between avatar projects and metaverse games">
+      description="The bridge between avatar projects and metaverse experiences">
       <HomepageHeader />
       <main className={styles.partners}>
         <Partners nbElements={6} />  

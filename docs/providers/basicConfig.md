@@ -39,7 +39,7 @@ export default {
 
 ## Experience Configuration (`config` object)
 
-In some instances, it's helpful to have information about the specific game or application using the AvatarConnect bridge. This might be an API key or some other identifier for the game.
+In some instances, it's helpful to have information about the specific game or application using the AvatarConnect bridge. This might be an API key or some other identifier for the experience.
 
 Any attributes described in your `config` will be accessible by any functions you define in your `pipeline`.
 

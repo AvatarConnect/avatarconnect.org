@@ -58,7 +58,7 @@ Your final stage **must** return data in the following format:
 ```javascript title="/providers/CryptoAvatars/index.js"
 export default {
   ...,
-  // This is the game configuration object for CryptoAvatars (used in STEP 2)
+  // This is the experience configuration object for CryptoAvatars (used in STEP 2)
   config: {
     apiKey: { required: true, type: String },
   },
@@ -89,7 +89,7 @@ export default {
           `https://api.cryptoavatars.io/nfts/avatars/${this.aggregate}?skip=0&limit=20`,
           {
             headers: {
-              'API-KEY': this.config.apiKey, // This is provided in the game's AvatarConnect configuration
+              'API-KEY': this.config.apiKey, // This is provided in the experience's AvatarConnect configuration
               accept: 'application/json',
             },
           }

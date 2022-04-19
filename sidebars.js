@@ -16,7 +16,7 @@ const sidebars = {
     {
       collapsed: false,
       type: 'category',
-      label: 'Game Engine Integrations',
+      label: 'Game Engine SDKs',
       items: [
         {
           type: 'doc',
