@@ -47,7 +47,7 @@ const config = {
       },
       announcementBar: {
         content:
-        'AvatarConnect is free and open source. Give us a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/AvatarConnect">Github</a>.',
+        '<b>AvatarConnect is free and open source. Give us a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/AvatarConnect">Github</a>.</b>',
         backgroundColor: 'var(--ifm-color-primary)',
         textColor: 'var(--ifm-font-color-base-inverse)',
         isCloseable: false,
@@ -109,7 +109,7 @@ const config = {
             items: [
               {
                 label: 'Get Started',
-                to: '/docs/intro',
+                to: '/docs',
               },
             ],
           },

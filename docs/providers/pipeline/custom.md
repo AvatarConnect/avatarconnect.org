@@ -10,13 +10,17 @@ We're always welcoming proposals and pull-requests for new pipeline stages. Howe
 
 ### Properties
 
-| Name | Description | Required |
+| Name | Description | Type |
 |-|-|-|
-| **`component`** | An imported Vue component implementing [this skeleton](#component-skeleton) | **`true`** |
+| **`component`** | An imported Vue component implementing [this skeleton](#component-skeleton) | **`required`** |
 
 ### `component`
 
-With the `component` property, you can import a custom Vue component to create
+With the `component` property, you can import a custom Vue component to create any custom user interface for your pipeline.
+
+When you're ready to pass the result to the next stage, you can do `this.$emit('result', <RESULT>)` to pass the aggregate to the next stage.
+
+If any errors occur, you can instead use `this.$emit('error', <ERROR OBJECT>)`
 
 ### Component Skeleton
 

@@ -2,26 +2,20 @@
 id: intro
 slug: /
 title: Introduction
-description:
-  QuestDB is a relational column-oriented database designed for real-time
-  analytics on time series data.
+description: TODO
 ---
 
 # Intro
 
 ## What is AvatarConnect
 
-<img src="/illustrations/explanation.svg" alt="Explanation.svg" style={{ margin: '0 auto', width: '100%', 'max-width': '600px' }}/>
-
+TODO
 ## Why is it important
+
+TODO
+
 ## How does it work?
 
-# Game SDKs
+TODO
 
-## JavaScript SDK
-
-## Unity SDK
-
-# Providers
-##
-
+<img src="/illustrations/explanation.svg" alt="Explanation.svg" style={{ margin: '0 auto', width: '100%', 'max-width': '600px' }}/>

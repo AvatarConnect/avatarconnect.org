@@ -52,3 +52,77 @@ Your final stage **must** return data in the following format:
   }
 }
 ```
+
+## CryptoAvatars Example
+
+```javascript title="/providers/CryptoAvatars/index.js"
+export default {
+  ...,
+  // This is the game configuration object for CryptoAvatars (used in STEP 2)
+  config: {
+    apiKey: { required: true, type: String },
+  },
+  pipeline: [
+    /**
+     * STEP 1
+     * 
+     * Request the user's ethereum address
+     */
+    {
+      // Format the `aggregate` to an individual address rather than array
+      format(result) {
+        const [address] = result
+        return address
+      },
+      method: 'eth_requestAccounts',
+      type: 'web3',
+    },
+    
+    /**
+     * STEP 2
+     * 
+     * Call the CryptoAvatars API asking for a list of the avatars for the ethereum address provided
+     */
+    {
+      async transform() {
+        const { data } = await this.$axios.get(
+          `https://api.cryptoavatars.io/nfts/avatars/${this.aggregate}?skip=0&limit=20`,
+          {
+            headers: {
+              'API-KEY': this.config.apiKey, // This is provided in the game's AvatarConnect configuration
+              accept: 'application/json',
+            },
+          }
+        )
+        return data
+      },
+      type: 'transform',
+    },
+
+    /**
+     * STEP 3
+     * 
+     * Present a list of avatars for the user to select from
+     */
+    {
+      // RETURN THE RESULT
+      format({ metadata: { asset } }) {
+        return { avatar: { format: 'vrm', type: 'humanoid', uri: asset } }
+      },
+      // Given a list-item, return its image
+      image({ metadata: { image } }) {
+        return image
+      },
+      // Given a list-item, return its title
+      name({ metadata: { name } }) {
+        return name
+      },
+      type: 'select',
+    },
+  ],
+}
+```
+
+### Result
+
+<img src="/demos/crypto-avatars.gif" alt="Pipeline Demo" style={{ margin: '0 auto', width: '100%', 'max-width': '800px' }}/>
