@@ -5,6 +5,11 @@ export const logos = [
     alt: "Mona",
   },
   {
+    href: "https://protocol.ai",
+    src: "/partners/protocollabs.svg",
+    alt: "Protocol Labs",
+  },
+  {
     href: "https://readyplayer.me",
     src: "/partners/readyplayerme.svg",
     alt: "ReadyPlayerMe",
@@ -24,4 +29,4 @@ export const logos = [
     src: "/partners/unity.svg",
     alt: "Unity",
   },
-]
+];
